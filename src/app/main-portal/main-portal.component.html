@@ -1,5 +1,12 @@
 <div class="container">
   <input [(ngModel)]="this.text" type="text" name="" id="">
+  <select [(ngModel)]="this.opt">
+    <option value="sha1">sha1</option>
+    <option value="sha224">sha224</option>
+    <option value="sha256">sha256</option>
+    <option value="sha384">sha384</option>
+    <option value="sha512">sha512</option>
+  </select>
   <button mat-flat-button color="primary" (click)="this.convert()">Hash</button>
 </div>
 <div class="containter">

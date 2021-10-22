@@ -1,5 +1,9 @@
 import { Component, OnInit } from '@angular/core';
 
+// install using:
+// npm install --save sha.js
+// or in case of error:
+// npm i --save-dev @types/sha.js
 import * as shajs from 'sha.js';
 
 
@@ -11,10 +15,12 @@ import * as shajs from 'sha.js';
 export class MainPortalComponent implements OnInit {
 
   public text: string;
+  public opt: string;
   public res: string;
 
   constructor() {
     this.text = '';
+    this.opt = 'sha1';
     this.res = '';
    }
 
@@ -22,7 +28,7 @@ export class MainPortalComponent implements OnInit {
   }
 
   convert() {
-    this.res = shajs('sha256').update(this.text).digest('hex');
+    this.res = shajs(this.opt).update(this.text).digest('hex');
   }
 
 }
