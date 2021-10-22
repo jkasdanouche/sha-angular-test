@@ -1,3 +1,10 @@
-<p>
-  main-portal works!
-</p>
+<div class="container">
+  <input [(ngModel)]="this.text" type="text" name="" id="">
+  <button mat-flat-button color="primary" (click)="this.convert()">Hash</button>
+</div>
+<div class="containter">
+  <h2>
+      {{ this.res }}
+  </h2>
+</div>
+
